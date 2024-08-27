@@ -10,8 +10,9 @@
         <?php endif ?>
         <p> <?= the_content() ?> </p>
         
-        <div>
-            <?php if ($current_url == get_permalink()) : ?>
+        <!-- content to be displayed, when clicking on the post -->
+        <?php if ($current_url == get_permalink()) : ?>
+            <div>
                 <?php if (get_comments_number() > 0) : ?>
                 <div>
                     <h3> Comments: </h3>
@@ -29,8 +30,8 @@
                     <p>No comments</p>
 
                 <?php endif ?>
-            <?php endif ?>
-        </div>
+            </div>
+        <?php endif ?>
     </article>
     <?php endwhile; else : ?>
         <p><?php esc_html_e( 'No posts uploaded' ); ?></p>
