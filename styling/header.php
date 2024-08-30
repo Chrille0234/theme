@@ -34,4 +34,9 @@
         height: 2px; 
         background-color: <?= get_theme_mod("text_accent", "#000") ?>;
     }
+
+    .custom-logo {
+        height: 75px;
+        width: 200px;
+    }
 </style>

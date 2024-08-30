@@ -7,6 +7,10 @@
     }
     a {
         color: <?= get_theme_mod("text_color", "#000") ?>;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
     }
     h1{
         color: <?= get_theme_mod("heading_primary_color", "#000") ?>;

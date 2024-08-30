@@ -42,7 +42,11 @@ function w_theme_customizer_settings($wp_customize) {
         ],
         "primary_header_background" => [
             "default" => "#fff",
-            "label" => __("Header","w_theme"),
+            "label" => __("Primary-Header Background","w_theme"),
+        ],
+        "post_background" => [
+            "default" => "#fff",
+            "label"=> __("Post Background","w_theme"),
         ]
     ];
 
@@ -66,5 +70,23 @@ function w_theme_customizer_css() {
     include("styling/header.php");
     include("styling/posts.php");
     include("styling/post.php");
+    include("styling/page.php");
 }
 add_action('wp_head', 'w_theme_customizer_css');
+
+function mytheme_setup() {
+    add_theme_support( 'post-thumbnails' );
+}
+
+function yourtheme_custom_logo_setup() {
+    $defaults = array(
+        'height'      => 100,
+        'width'       => 400,
+        'flex-height' => true,
+        'flex-width'  => true,
+    );
+    add_theme_support( 'custom-logo', $defaults );
+}
+add_action( 'after_setup_theme', 'yourtheme_custom_logo_setup' );
+
+add_action( 'after_setup_theme', 'mytheme_setup' );

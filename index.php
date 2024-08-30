@@ -1,3 +1,6 @@
+<?php
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +18,5 @@
 
         <?php endif; ?>
     </section>
-    
 </body>
 </html>
